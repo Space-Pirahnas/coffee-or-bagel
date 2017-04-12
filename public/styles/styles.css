@@ -603,6 +603,15 @@ label {
   max-width: 10%;
 }
 
+
 .match_rating_star {
   color: #ffda44
+}
+
+.interests {
+  color: #337ab7;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px
+
 }
