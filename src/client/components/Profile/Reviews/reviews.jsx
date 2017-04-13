@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import * as actions from '../../../actions/reviews.jsx';
+import { Rating } from 'material-ui-rating';
 
 class Review extends Component {
   constructor(props) {
@@ -14,13 +15,14 @@ class Review extends Component {
 
   render() {
     return (
-      <div>
-        <div>{this.props.review.Reviewer_Rating}</div>
-        <div>{this.props.review.Reviewer_Name}</div>
-        <div>{this.props.review.Reviewer_Text}</div>
-        <div>{this.props.review.Reviewer_City}</div>
-        <div>{this.props.review.Reviewer_Image}</div>
-        {this.props.user.Email === this.props.review.Reviewer_Email ? <button onClick={this.deleteReview}>Delete</button>: null}
+      <div className="Review">
+        <div className="ReviewRating">
+          <Rating value={this.props.review.Reviewer_Rating} max={5} readOnly={true} />
+        </div>
+        <div className="ReviewText">{this.props.review.Reviewer_Text}</div>
+        <img className="ReviewImage" src={this.props.review.Reviewer_Image} />
+        <div className="ReviewName">{this.props.review.Reviewer_Name} from {this.props.review.Reviewer_City}</div>
+        {this.props.user.Email === this.props.review.Reviewer_Email ? <button className="Button" onClick={this.deleteReview}>Delete</button>: null}
       </div>
     )
   }
