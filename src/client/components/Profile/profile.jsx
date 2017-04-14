@@ -39,9 +39,9 @@ class Profile extends React.Component {
         </div>
       )
       return (
-        <div id="hero" className="Hero">
+        <div className="background" style={{backgroundImage: "url(styles/retina_wood.png)"}}>
           <div className="ProfileContainer">
-            <div className="Profile">
+            <div className="Profile" style={{backgroundImage: "url(styles/creampaper.png)"}}>
               <div className="ProfilePicture">
                 {
                   !this.state.edit ? this.props.target.Image ? <ProfilePic /> : <img className="profileImage" src={"./styles/noprofile.png"} /> : null
@@ -57,15 +57,14 @@ class Profile extends React.Component {
                 <div className="ProfileContactInfo">
                   {this.props.target.Profession} @ {this.props.target.Company}  -  {this.props.target.City}  -  {this.props.target.Email}
                 </div>
-                <h3>Interests</h3>
+                <h2>Interests</h2>
                 <div className="ProfileInterests">
                   { this.props.target ? this.props.target.Interests.split('-').map((interest,i) => <div className="interest Button" key={i}>{interest}</div>) : null}
                 </div>
                 <div className="ProfileBio">{this.props.target.Bio}</div>
                 <a href="/#/message" className="Button">Message</a>
               </div>
-            </div>
-            
+            </div>         
             <div className="ProfileReview">
               <h2 style={{"margin-top": "50px"}} >Reviews</h2>
               <center><button className="Button" onClick={this.toggleReview} >Write A Review!</button></center>
