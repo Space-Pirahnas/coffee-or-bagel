@@ -318,10 +318,10 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
-  color: #ffffff;
+  color: black;
   padding: 10px;
   box-sizing: border-box;
-  border: 2px solid rgba(245, 245, 241, 0.2);
+  border: 2px solid black;
   border-radius: 44px;
   font-size: 15px;
   font-weight: 600;
@@ -659,7 +659,6 @@ label {
   line-height: 1.5em;
   color: black;
   padding: 20px;
-  margin-bottom: 20px;
   box-sizing: border-box;
   border: 2px solid rgba(245, 245, 241, 0.2);
   font-size: 14px;
@@ -681,7 +680,15 @@ label {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+}
+
+.profileInterest {
+  color: black;
+  border: 1px solid black;
+  padding: 0.5em;
+  margin: 2px;
+
 }
 
 .ProfileReview {
@@ -701,6 +708,7 @@ label {
   padding: 20px;
   border: 2px solid rgba(245, 245, 241, 0.2);
   border-radius: 44px;
+  margin: 20px;
 }
 
 .Review {
@@ -745,11 +753,6 @@ label {
   overflow: overlay;
 }
 
-.seperation {
-  border-top: 3px solid #337ab7; 
-  width: 100%;
-
-}
 
 .bubble-container {
   margin: 10px;
@@ -787,7 +790,7 @@ label {
 }
 
 .reviewLeft {
-  background-color: #fceabb;
+  background: rgba(173, 255, 216, 0.7);
   margin: 5px;
   width: 100%;
 }
@@ -795,11 +798,11 @@ label {
 .reviewLeft::before {
   box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
   left: -9px;
-  background-color: #fceabb;
+  background: rgba(173, 255, 216, 0.7);
 }
 
 .reviewRight {
-  background-color: #337ab7;
+  background: rgba(38,105,232,0.7);
   margin: 5px;
   width: 100%;
 }
@@ -807,7 +810,7 @@ label {
 .reviewRight::before {
   box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );
   right: -9px;
-  background-color: #337ab7;
+  background: rgba(38,105,232,0.7);
 }
 
 .img-circle {
